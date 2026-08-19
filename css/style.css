@@ -1,4 +1,4 @@
-/* Global styles for portfolio — paleta bordô, fontes Great Vibes (titles) + Inter (body) */
+/* Global styles for portfolio — paleta bordô, fontes Great Vibes (titles) + Parisienne (floating tagline) + Inter (body) */
 :root{
   --color-primary:#6B0F1A;        /* bordô principal */
   --color-primary-dark:#4D0A13;
@@ -55,6 +55,29 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);col
 .ig-toast{position:fixed;left:50%;bottom:6%;transform:translateX(-50%) translateY(10px);background:rgba(31,41,51,.95);color:#fff;padding:.6rem 1rem;border-radius:999px;opacity:0;pointer-events:none;transition:opacity 180ms ease,transform 180ms ease}
 .ig-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+/* Floating creative tagline (bottom-right on Home) */
+.floating-tagline{
+  position:fixed;
+  right:2rem;
+  bottom:2rem;
+  font-family:'Parisienne', cursive;
+  font-size:1.05rem;
+  color:var(--color-plaid-green);
+  background:rgba(246,242,236,0.78);
+  padding:.45rem .9rem;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(15,23,35,.12);
+  transition:transform 260ms var(--transition),opacity 260ms ease;
+  opacity:0.98;
+  z-index:40;
+}
+.floating-tagline:hover{transform:translateY(-6px) rotate(-1deg)}
+
+/* Slightly smaller on mobile and inset so it doesn't cover content */
+@media (max-width:640px){
+  .floating-tagline{right:.85rem;bottom:1rem;font-size:.95rem;padding:.35rem .7rem;border-radius:8px}
+}
+
 /* Backgrounds mapped to pages */
 .section-bg--home{
   background-image:
@@ -89,5 +112,5 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);col
 
 /* Accessibility: reduced motion */
 @media (prefers-reduced-motion:reduce){
-  .btn-primary,.ig-btn,.card{transition:none;transform:none}
+  .btn-primary,.ig-btn,.card,.floating-tagline{transition:none;transform:none}
 }
