@@ -1,6 +1,6 @@
 // ig-open.js
-// Creative Instagram opener: tries to open the Instagram app first, falls back to web profile.
-// Uses a short toast message to inform the user.
+// Enhanced opener: handles Instagram app fallback, mailto and tel links and general external links.
+// Shows a quick toast and attempts the appropriate deep link or fallback.
 
 (function(){
   function showToast(message){
@@ -9,35 +9,81 @@
     t.textContent = message;
     t.setAttribute('aria-hidden', 'false');
     t.classList.add('show');
-    setTimeout(function(){ t.classList.remove('show'); t.setAttribute('aria-hidden','true'); }, 1700);
+    setTimeout(function(){ t.classList.remove('show'); t.setAttribute('aria-hidden','true'); }, 1600);
   }
 
   function openInstagram(username){
     var web = 'https://www.instagram.com/' + username + '/';
     var app = 'instagram://user?username=' + username;
 
-    // Show quick toast
     showToast('Abrindo Instagram...');
 
-    // Try to open the app first. On most mobile browsers this will switch to the app.
-    // Use time-based fallback to web.
     var now = Date.now();
-    // Attempt to change location to app link
+    // Try app deep link first
     window.location = app;
 
-    // After 900ms, if we're still on the page, go to web URL
+    // Fallback to web profile after short delay if app didn't open
     setTimeout(function(){
       if (Date.now() - now < 1200) {
-        window.open(web, '_blank');
+        window.open(web, '_blank', 'noopener');
       }
     }, 900);
+  }
+
+  function openMail(href){
+    showToast('Abrindo email...');
+    // small delay so toast is visible
+    setTimeout(function(){ window.location = href; }, 220);
+  }
+
+  function openTel(href){
+    showToast('Abrindo telefone...');
+    setTimeout(function(){ window.location = href; }, 220);
+  }
+
+  function openExternal(href){
+    showToast('Abrindo link...');
+    setTimeout(function(){ window.open(href, '_blank', 'noopener'); }, 220);
   }
 
   document.addEventListener('click', function(e){
     var btn = e.target.closest('.ig-btn');
     if(!btn) return;
-    var username = btn.getAttribute('data-username') || 'islacanonico';
     e.preventDefault();
-    openInstagram(username);
+
+    var username = btn.getAttribute('data-username');
+    var href = btn.getAttribute('href') || '';
+
+    if(username){
+      openInstagram(username);
+      return;
+    }
+
+    if(href.indexOf('mailto:') === 0){
+      openMail(href);
+      return;
+    }
+
+    if(href.indexOf('tel:') === 0){
+      openTel(href);
+      return;
+    }
+
+    if(href){
+      openExternal(href);
+      return;
+    }
+
+    // if no href and no username, do nothing
   }, false);
+
+  // keyboard: treat Enter/Space on focused .ig-btn as click
+  document.addEventListener('keydown', function(e){
+    if(e.key !== 'Enter' && e.key !== ' ') return;
+    var active = document.activeElement;
+    if(active && active.classList && active.classList.contains('ig-btn')){
+      e.preventDefault();
+      active.click();
+    }
+  });
 })();
