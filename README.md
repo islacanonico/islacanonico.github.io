@@ -1,8 +1,12 @@
 Portfólio estático para islacanonico/islacanonico.github.io
 
 Atualizações recentes:
-- Adicionado botão criativo para abrir Instagram via app (com fallback para a versão web).
-- Instagram configurado para @islacanonico (link: https://www.instagram.com/islacanonico/).
-- Inseridos botões IG na home, sobre, projetos e contato.
+- Substituí placeholders de texto pela bio fornecida e incluí a frase de efeito.
+- Adicionei suporte a dark-mode (toggle no header) com preferência salva no localStorage e respeitando prefers-color-scheme.
+- Acrescentei var --color-plaid-green extraída do xadrez.
+- Micro-animações: hover em cards, transições suaves e feedbacks (toasts).
+- Mapeei os backgrounds para usar os versões raster esperadas: assets/images/xadrez.jpg, toile.jpg, listras.jpg — substitua estes arquivos pelos seus JPG/PNG originais se quiser máxima fidelidade.
 
-Próximos: se quiser, envio imagens raster otimizadas em /assets/images e atualizo textos reais (bio, projetos, e-mail).
+Próximos passos:
+- Se quiser, envie as imagens originais (JPG/PNG) e eu as otimizarei (WebP + srcset) e farei commit.
+- Posso adicionar foto de perfil e ícones sociais extras a pedido.
