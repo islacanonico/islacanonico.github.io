@@ -39,7 +39,7 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);col
 .hero-inner{padding:4rem 0}
 .hero-title{font-family:'Great Vibes',cursive;font-size:2.35rem;margin-bottom:.25rem;color:var(--color-primary)}
 .hero-lead{max-width:58ch;color:rgba(31,41,51,.9);margin-bottom:1rem}
-.hero-tagline{font-style:italic;color:var(--color-accent);margin-bottom:1rem}
+.hero-tagline{font-style:italic;color:var(--color-plaid-green);margin-bottom:1rem;font-weight:600}
 .btn-primary{background:var(--color-primary);color:#fff;padding:.7rem 1.1rem;border-radius:10px;border:0;cursor:pointer;transition:background var(--transition),transform var(--transition);display:inline-block;text-decoration:none;box-shadow:0 8px 20px rgba(107,15,26,.12)}
 .btn-primary:hover{background:var(--color-primary-dark);transform:translateY(-2px)}
 .about-inner, .projects-list, .contact-inner{padding:2rem 0}
