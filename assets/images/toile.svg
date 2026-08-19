@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#F6F2EC" />
+  <!-- simplified toile: repeating delicate strokes in sepia -->
+  <g fill="none" stroke="#C9A57A" stroke-width="1.6" opacity="0.85">
+    <path d="M40 80 C120 20 220 140 300 80"/>
+    <path d="M100 200 C200 120 320 240 420 180"/>
+    <path d="M50 360 C180 300 300 420 420 360"/>
+    <path d="M80 480 C200 420 360 520 480 460"/>
+    <path d="M60 620 C160 560 300 680 420 620"/>
+  </g>
+  <!-- subtle grid to emulate fabric texture -->
+  <g opacity="0.06" stroke="#000" stroke-width="2">
+    <path d="M0 0 L1600 0" />
+  </g>
+</svg>

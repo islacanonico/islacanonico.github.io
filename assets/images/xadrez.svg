@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#F6F2EC" />
+  <!-- green plaid / xadrez simplified -->
+  <defs>
+    <pattern id="plaid" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="#F6F2EC" />
+      <rect x="0" y="0" width="80" height="200" fill="#8A9A7F" opacity="0.95" />
+      <rect x="120" y="0" width="80" height="200" fill="#8A9A7F" opacity="0.65" />
+      <rect y="0" width="200" height="80" fill="#8A9A7F" opacity="0.65" />
+      <rect y="120" width="200" height="80" fill="#8A9A7F" opacity="0.45" />
+    </pattern>
+  </defs>
+  <rect width="1400" height="900" fill="url(#plaid)" />
+</svg>

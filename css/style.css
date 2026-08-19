@@ -1,0 +1,71 @@
+/* Global styles for portfolio — paleta bordô, fontes Great Vibes (titles) + Inter (body) */
+:root{
+  --color-primary:#6B0F1A;        /* bordô principal */
+  --color-primary-dark:#4D0A13;
+  --color-primary-light:#8E2430;
+  --color-accent:#C9A57A;         /* sepia warm */
+  --color-sage:#8A9A7F;
+  --color-olive:#6B7A63;
+  --color-bg:#F6F2EC;            /* ivory */
+  --color-card:#FFFFFF;
+  --color-text:#1F2933;          /* charcoal */
+  --radius:10px;
+  --max-width:1100px;
+  --transition:200ms ease;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);color:var(--color-text);line-height:1.6}
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+.site-header{background:var(--color-card);border-bottom:1px solid rgba(31,41,51,.06)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.15rem}
+.brand-title{font-family:'Great Vibes', cursive;font-size:1.45rem;color:var(--color-primary)}
+.site-nav a{margin-left:1rem;color:var(--color-text);text-decoration:none}
+.hero{padding:4rem 0;text-align:left}
+.hero-inner{padding:4rem 0}
+.hero-title{font-family:'Great Vibes',cursive;font-size:2.35rem;margin-bottom:.25rem;color:var(--color-primary)}
+.hero-lead{max-width:58ch;color:rgba(31,41,51,.9);margin-bottom:1rem}
+.btn-primary{background:var(--color-primary);color:#fff;padding:.7rem 1.1rem;border-radius:10px;border:0;cursor:pointer;transition:background var(--transition),transform var(--transition);display:inline-block;text-decoration:none}
+.btn-primary:hover{background:var(--color-primary-dark);transform:translateY(-2px)}
+.about-inner, .projects-list, .contact-inner{padding:2rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--color-card);padding:1.15rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,35,.06)}
+.site-footer{padding:1.5rem 0;text-align:center;color:#6b7280;border-top:1px solid rgba(31,41,51,.04)}
+
+/* Backgrounds mapped to pages */
+.section-bg--home{
+  background-image:
+    linear-gradient(rgba(246,242,236,0.7), rgba(246,242,236,0.7)),
+    url('../assets/images/xadrez.svg');
+  background-size:cover;
+  background-position:center;
+}
+.section-bg--about{
+  background-image:
+    linear-gradient(rgba(246,242,236,0.86), rgba(246,242,236,0.86)),
+    url('../assets/images/toile.svg');
+  background-size:cover;
+  background-position:center;
+}
+.site-header--stripe, .site-footer--stripe{
+  background-image:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    url('../assets/images/listras.svg');
+  background-repeat:repeat-x;
+  background-size:auto 48px;
+  background-position:center;
+}
+
+/* Slight overlay header variant for about page */
+.site-header--overlay{background:transparent;color:var(--color-text)}
+
+@media (max-width:640px){
+  .site-header .container{flex-direction:column;gap:.75rem}
+  .hero-title{font-size:1.6rem}
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion:reduce){
+  .btn-primary{transition:none}
+}
