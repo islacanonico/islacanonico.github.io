@@ -33,25 +33,32 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);col
 .card{background:var(--color-card);padding:1.15rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,35,.06)}
 .site-footer{padding:1.5rem 0;text-align:center;color:#6b7280;border-top:1px solid rgba(31,41,51,.04)}
 
+/* Social / Instagram button */
+.socials{display:flex;align-items:center;gap:0.75rem}
+.ig-btn{background:transparent;border:2px solid var(--color-primary);color:var(--color-primary);padding:.35rem .65rem;border-radius:999px;font-weight:600;cursor:pointer;transition:all var(--transition)}
+.ig-btn:hover{background:var(--color-primary);color:#fff;transform:translateY(-2px)}
+.ig-toast{position:fixed;left:50%;bottom:6%;transform:translateX(-50%) translateY(10px);background:rgba(31,41,51,.95);color:#fff;padding:.6rem 1rem;border-radius:999px;opacity:0;pointer-events:none;transition:opacity 180ms ease,transform 180ms ease}
+.ig-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
 /* Backgrounds mapped to pages */
 .section-bg--home{
   background-image:
     linear-gradient(rgba(246,242,236,0.7), rgba(246,242,236,0.7)),
-    url('../assets/images/xadrez.svg');
+    url('assets/images/xadrez.svg');
   background-size:cover;
   background-position:center;
 }
 .section-bg--about{
   background-image:
     linear-gradient(rgba(246,242,236,0.86), rgba(246,242,236,0.86)),
-    url('../assets/images/toile.svg');
+    url('assets/images/toile.svg');
   background-size:cover;
   background-position:center;
 }
 .site-header--stripe, .site-footer--stripe{
   background-image:
     linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
-    url('../assets/images/listras.svg');
+    url('assets/images/listras.svg');
   background-repeat:repeat-x;
   background-size:auto 48px;
   background-position:center;
@@ -68,4 +75,5 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);col
 /* Accessibility: reduced motion */
 @media (prefers-reduced-motion:reduce){
   .btn-primary{transition:none}
+  .ig-btn{transition:none}
 }
