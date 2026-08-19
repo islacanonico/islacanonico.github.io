@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Isla Canonico — Portfólio</title>
   <meta name="description" content="Portfólio de Isla Canonico — desenvolvo interfaces elegantes e experiências digitais." />
-  <!-- Google Fonts: Great Vibes (titles) + Parisienne (floating tagline) + Inter (body) -->
+  <!-- Google Fonts: Great Vibes (titles) + Parisienne + Oswald (impact) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -34,7 +34,7 @@
         <div class="hero-left">
           <h2 class="hero-title">Olá — eu sou Isla Canonico</h2>
 
-          <!-- Impact phrase block (inline within hero, not fixed) -->
+          <!-- Impact phrase block (inline within hero, animated on enter) -->
           <div class="impact-block" aria-label="Frase de efeito">
             <div class="impact-line">Transformo</div>
             <div class="impact-line"><span class="impact-em">curiosidade</span> em</div>
@@ -89,7 +89,8 @@
   </footer>
 
   <div id="ig-toast" class="ig-toast" aria-hidden="true">Abrindo Instagram…</div>
-  <script src="assets/js/ig-open.js"></script>
-  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/ig-open.js" defer></script>
+  <script src="assets/js/impact-anim.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
 </body>
 </html>

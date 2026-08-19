@@ -1,4 +1,4 @@
-/* Global styles for portfolio — paleta bordô, fontes Great Vibes (titles) + Parisienne (floating tagline) + Inter (body) */
+/* Global styles for portfolio — paleta bordô, fontes Great Vibes (titles) + Parisienne + Oswald (impact) + Inter (body) */
 :root{
   --color-primary:#6B0F1A;        /* bordô principal */
   --color-primary-dark:#4D0A13;
@@ -44,8 +44,9 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);col
 
 /* Impact phrase block (stacked large lines similar to reference) */
 .impact-block{margin:1.1rem 0 1.6rem 0}
-.impact-line{font-family:Inter, system-ui, Arial, sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; line-height:0.95; font-size:clamp(1.05rem, 4vw, 2.6rem); color:var(--color-text);}
-.impact-em{color:var(--color-plaid-green); font-style:italic; font-weight:700}
+.impact-line{font-family:'Oswald', Inter, system-ui, Arial, sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; line-height:0.95; font-size:clamp(1.05rem, 4vw, 2.6rem); color:var(--color-text); transform:translateY(18px); opacity:0;}
+.impact-line.in-view{transform:translateY(0); opacity:1}
+.impact-em{color:var(--Color-plaid-green); color:var(--color-plaid-green); font-style:italic; font-weight:700}
 .impact-accent{color:var(--color-primary);}
 
 /* Ensure the block doesn't overflow hero or other pages */
