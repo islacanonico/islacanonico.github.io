@@ -111,6 +111,16 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);col
 /* Slight overlay header variant for about page */
 .site-header--overlay{background:transparent;color:var(--color-text)}
 
+/* New layout: hero two-column */
+.hero-inner{display:flex;align-items:center;gap:2rem;padding:4rem 0}
+.hero-left{flex:1}
+.hero-right{flex:1;text-align:right}
+
+@media (max-width:880px){
+  .hero-inner{flex-direction:column;text-align:center}
+  .hero-right{text-align:center}
+}
+
 @media (max-width:640px){
   .site-header .container{flex-direction:column;gap:.75rem}
   .hero-title{font-size:1.6rem}

@@ -59,11 +59,21 @@
         </ul>
 
         <h4>Mídias</h4>
-        <p>Inclui fotografia de cena, making‑of e um clipe curto publicado no TikTok (link interativo na Home).</p>
+        <p>Inclui fotografia de cena, making‑of e um clipe curto publicado no TikTok (embed abaixo).</p>
 
         <h4>Créditos</h4>
         <p>Design e concepção: Isla Canonico<br>Produção e ateliê: nome do ateliê (substituir)<br>Fotografia: nome do fotógrafo (substituir)</p>
       </section>
+
+      <!-- Modal for TikTok video (lazy-load) -->
+      <div id="video-modal" class="video-modal" hidden>
+        <div class="video-modal__backdrop" data-close></div>
+        <div class="video-modal__inner" role="dialog" aria-modal="true" aria-label="Vídeo Figurino Opera do Malandro Tropicalista">
+          <button class="video-modal__close" aria-label="Fechar">✕</button>
+          <div id="video-embed-wrap" class="video-embed-wrap"></div>
+          <p class="video-credits">Abrir no <a href="https://vt.tiktok.com/ZSVSW5G87/" target="_blank" rel="noopener">TikTok</a></p>
+        </div>
+      </div>
 
     </section>
   </main>
@@ -80,7 +90,8 @@
   </footer>
 
   <div id="ig-toast" class="ig-toast" aria-hidden="true">Abrindo Instagram…</div>
-  <script src="assets/js/ig-open.js"></script>
-  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/ig-open.js" defer></script>
+  <script src="assets/js/video-embed.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
 </body>
 </html>

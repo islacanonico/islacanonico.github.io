@@ -34,7 +34,11 @@
         <div class="hero-left">
           <h2 class="hero-title">Olá — eu sou Isla Canonico</h2>
 
-          <!-- Impact phrase block (inline within hero, animated on enter) -->
+          <a class="btn-primary" href="projects.html">Ver projetos</a>
+        </div>
+
+        <div class="hero-right">
+          <!-- Impact phrase block moved to the right to balance layout -->
           <div class="impact-block" aria-label="Frase de efeito">
             <div class="impact-line">Transformo</div>
             <div class="impact-line"><span class="impact-em">curiosidade</span> em</div>
@@ -44,9 +48,8 @@
             <div class="impact-line">para dar vida a projetos</div>
             <div class="impact-line">relevantes.</div>
           </div>
-
-          <a class="btn-primary" href="projects.html">Ver projetos</a>
         </div>
+
       </div>
     </section>
 
@@ -59,21 +62,19 @@
       </div>
     </section>
 
-    <!-- Project video card (interactive) -->
-    <section id="project-video" class="container project-video">
-      <h3>Vídeo do projeto</h3>
-      <div class="video-card" role="button" tabindex="0" aria-label="Abrir vídeo Figurino Opera do Malandro Tropicalista">
-        <img class="video-poster" src="/assets/images/video-poster.svg" alt="Thumbnail do vídeo Figurino Opera do Malandro Tropicalista">
-        <div class="play-overlay" aria-hidden="true">
-          <span class="play-icon">►</span>
-        </div>
-      </div>
-      <p class="video-meta"><strong>Figurino — Opera do Malandro Tropicalista</strong> — Clipe curto no TikTok. <button class="btn-link open-video">Assistir</button></p>
-    </section>
+    <!-- Project video removed from Home per request; the video is available on the dedicated project page -->
 
     <section id="featured" class="container">
       <h3>Projetos em destaque</h3>
       <div class="grid">
+        <article class="card">
+          <a href="opera-do-malandro.html">
+            <img src="/assets/images/opera-thumb.svg" alt="Figurino Opera do Malandro Tropicalista" style="width:100%;border-radius:8px;margin-bottom:.5rem;" />
+            <h4>Figurino — Opera do Malandro Tropicalista</h4>
+          </a>
+          <p>Projeto de figurino inspirado na estética tropicalista e nas personagens do Malandro — pesquisa de materialidade, cor e movimento.</p>
+          <p><a href="opera-do-malandro.html">Ver projeto</a></p>
+        </article>
         <article class="card">
           <h4>Projeto A</h4>
           <p>Breve descrição do projeto A com tecnologias e papel.</p>
@@ -100,20 +101,9 @@
     </div>
   </footer>
 
-  <!-- Modal (hidden until needed) -->
-  <div id="video-modal" class="video-modal" hidden>
-    <div class="video-modal__backdrop" data-close></div>
-    <div class="video-modal__inner" role="dialog" aria-modal="true" aria-label="Vídeo Figurino Opera do Malandro Tropicalista">
-      <button class="video-modal__close" aria-label="Fechar">✕</button>
-      <div id="video-embed-wrap" class="video-embed-wrap"></div>
-      <p class="video-credits">Abrir no <a href="https://vt.tiktok.com/ZSVSW5G87/" target="_blank" rel="noopener">TikTok</a></p>
-    </div>
-  </div>
-
   <div id="ig-toast" class="ig-toast" aria-hidden="true">Abrindo Instagram…</div>
   <script src="assets/js/ig-open.js" defer></script>
   <script src="assets/js/impact-anim.js" defer></script>
-  <script src="assets/js/video-embed.js" defer></script>
   <script src="assets/js/theme.js" defer></script>
 </body>
 </html>
