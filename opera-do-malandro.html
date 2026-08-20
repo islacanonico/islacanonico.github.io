@@ -32,7 +32,28 @@
       <h2>Figurino — Opera do Malandro Tropicalista</h2>
       <p class="project-sub">Trabalho de figurino que investiga referências tropicalistas e a performance do personagem malandro. Pesquisa de cor, textura, bordados e trajes para cena.</p>
 
-      <!-- Content below the description removed as requested -->
+      <!-- Interactive video block: opens a modal with the TikTok embed -->
+      <section class="project-video" aria-label="Vídeo do projeto" style="margin-top:1.25rem;">
+        <h3>Vídeo do projeto</h3>
+        <div class="video-card" role="button" tabindex="0" aria-label="Abrir vídeo Figurino Opera do Malandro Tropicalista">
+          <img class="video-poster" src="/assets/images/video-poster.svg" alt="Thumbnail do vídeo Figurino Opera do Malandro Tropicalista">
+          <div class="play-overlay" aria-hidden="true">
+            <span class="play-icon">►</span>
+          </div>
+        </div>
+        <p class="video-meta"><strong>Figurino — Opera do Malandro Tropicalista</strong> — Clipe curto no TikTok. <button class="btn-link open-video" aria-expanded="false">Ver clipe no TikTok</button></p>
+        <p class="video-meta"><a href="https://vt.tiktok.com/ZSVSW5G87/" target="_blank" rel="noopener">Abrir no TikTok (link direto)</a></p>
+      </section>
+
+      <!-- Modal for the TikTok embed (lazy-loaded by assets/js/video-embed.js) -->
+      <div id="video-modal" class="video-modal" hidden>
+        <div class="video-modal__backdrop" data-close></div>
+        <div class="video-modal__inner" role="dialog" aria-modal="true" aria-label="Vídeo Figurino Opera do Malandro Tropicalista">
+          <button class="video-modal__close" aria-label="Fechar">✕</button>
+          <div id="video-embed-wrap" class="video-embed-wrap"></div>
+          <p class="video-credits">Caso não abra, acesse no <a href="https://vt.tiktok.com/ZSVSW5G87/" target="_blank" rel="noopener">TikTok</a>.</p>
+        </div>
+      </div>
 
     </section>
   </main>
@@ -48,8 +69,9 @@
     </div>
   </footer>
 
-  <div id="ig-toast" class="ig-toast" aria-hidden="true">Abrindo Instagram…</div>
+  <div id="ig-toast" class="ig-toast" aria-hidden="true">Abrindo...</div>
   <script src="assets/js/ig-open.js" defer></script>
+  <script src="assets/js/video-embed.js" defer></script>
   <script src="assets/js/theme.js" defer></script>
 </body>
 </html>
