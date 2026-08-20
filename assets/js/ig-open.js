@@ -16,8 +16,6 @@
     var web = 'https://www.instagram.com/' + username + '/';
     var app = 'instagram://user?username=' + username;
 
-    showToast('Abrindo Instagram...');
-
     var now = Date.now();
     // Try app deep link first
     window.location = app;
@@ -31,18 +29,15 @@
   }
 
   function openMail(href){
-    showToast('Abrindo email...');
     // small delay so toast is visible
     setTimeout(function(){ window.location = href; }, 220);
   }
 
   function openTel(href){
-    showToast('Abrindo telefone...');
     setTimeout(function(){ window.location = href; }, 220);
   }
 
   function openExternal(href){
-    showToast('Abrindo link...');
     setTimeout(function(){ window.open(href, '_blank', 'noopener'); }, 220);
   }
 
@@ -51,8 +46,25 @@
     if(!btn) return;
     e.preventDefault();
 
+    var service = btn.getAttribute('data-service');
     var username = btn.getAttribute('data-username');
     var href = btn.getAttribute('href') || '';
+
+    // Determine toast message
+    var toastMsg = 'Abrindo...';
+    if(username){
+      toastMsg = 'Abrindo Instagram...';
+    } else if(service === 'tiktok'){
+      toastMsg = 'Abrindo TikTok...';
+    } else if(href.indexOf('mailto:') === 0){
+      toastMsg = 'Abrindo email...';
+    } else if(href.indexOf('tel:') === 0){
+      toastMsg = 'Abrindo telefone...';
+    } else {
+      toastMsg = 'Abrindo link...';
+    }
+
+    showToast(toastMsg);
 
     if(username){
       openInstagram(username);
