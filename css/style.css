@@ -88,7 +88,7 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--color-bg);col
 .section-bg--home{
   background-image:
     linear-gradient(rgba(246,242,236,0.72), rgba(246,242,236,0.72)),
-    url('assets/images/xadrez.jpg');
+    url('assets/images/toile-4.jpg');
   background-size:cover;
   background-position:center;
 }
